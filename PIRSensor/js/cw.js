@@ -1,5 +1,4 @@
-var request = require('request'),
-    $ = require('jquery');
+var request = require('request');
 var room_id = '*****';
 var options = {
     headers: {
