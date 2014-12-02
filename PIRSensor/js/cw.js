@@ -70,7 +70,7 @@ setInterval(function(){
             var reply_message = '[To:' + data[i].account.account_id + '] ' + data[i].account.name + 'さん\n';
 
             //ask_patternとマッチしたらセンサー入力に応じてreply_messageをセット
-            if(data[i].body.indexOf(ask_pattern_1) != -1) {
+            if(tmp.indexOf(ask_pattern_1) != -1) {
                 if (sensor_output === 1) {
                     reply_message += 'おるで';
                 } else if (sensor_output === 0) {
@@ -78,7 +78,7 @@ setInterval(function(){
                 } else {
                     reply_message += '自分で確認してやー';
                 }
-            } else if (data[i].body.indexOf(ask_pattern_2) != -1){
+            } else if (tmp.indexOf(ask_pattern_2) != -1){
                 if (sensor_output === 1) {
                     reply_message += 'セコムまだアカンで';
                 } else if (sensor_output === 0) {
