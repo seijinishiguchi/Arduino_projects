@@ -1,14 +1,14 @@
 var request = require('request');
-var room_id = '*****';
+var room_id = 'number of room id';
 var options = {
     headers: {
-        'X-ChatWorkToken': '******'
+        'X-ChatWorkToken': 'api token'
     },
     from: [],
     json: true
 };
 var serial_server = {
-   url: "******",
+   url: 'url of serialport server',
    from: [],
    json: true
 };
@@ -61,7 +61,7 @@ var bot_processing = function(){
 
     //メッセージ取得
     getMessage(function(data){
-        if(!data)return;
+        if(!Array.isArray(data))return;
         console.log('check:',data);
         console.log('sensor output is ' + sensor_output);
 
