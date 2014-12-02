@@ -1,8 +1,13 @@
 body {
     background-color: #5C4033;
+    font-size: 100%;
 }
 
-.indicate {
+body.ocupied {
+    background-color: darkorange;
+}
+
+.container {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -12,19 +17,20 @@ body {
     bottom: 0;
     left: 0;
     width: 90%;
-    height: 230px;
+    height: 300px;
     margin: auto;
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
-    color: black;
-    background-color: navajowhite;
-    font-size: 24px;
-    font-weight: 700;
+    padding: 2em 0;
     text-align: center;
-    line-height: 230px;
 }
 
-.indicate.ocupied {
+.icon {
+    width: 200px;
+    margin-bottom: 1em;
+}
+
+.indicate {
     color: white;
-    background-color: darkorange;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
 }
