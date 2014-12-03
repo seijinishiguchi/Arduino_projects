@@ -16,7 +16,7 @@ $(function(){
     }
 
     // 1秒間隔でArduinoからセンサー出力を取得
-    var serial_communication = function(){
+    var getSerialData = function(){
         $.getJSON(serial_server)
         .done(function (serial_data) {
             //console.log('done', serial_data);
@@ -24,7 +24,7 @@ $(function(){
             viewChange(sensor_output);
 
         }).fail(console.error.bind(console));
-        setTimeout(serial_communication, 1000);
+        setTimeout(getSerialData, 1000);
     };
-    serial_communication();
+    getSerialData();
 });
