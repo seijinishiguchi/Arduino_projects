@@ -17,14 +17,19 @@ $(function(){
 
     // 1秒間隔でArduinoからセンサー出力を取得
     var getSerialData = function(){
-        $.getJSON(serial_server)
-        .done(function (serial_data) {
-            //console.log('done', serial_data);
+        $.getJSON(serial_server, function() {
+            console.log('success');
+        })
+        .done(function(serial_data) {
+            //console.log('done', JSON.stringify(serial_data));
             var sensor_output = serial_data[0].data;
             viewChange(sensor_output);
-
-        }).fail(console.error.bind(console));
+        })
+        .fail(function() {
+            console.log( "error" );
+        });
         setTimeout(getSerialData, 1000);
     };
     getSerialData();
 });
+
