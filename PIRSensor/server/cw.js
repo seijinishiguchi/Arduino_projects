@@ -1,14 +1,14 @@
 var request = require('request');
-var room_id = '{room id number}';
+var room_id = '26472964';
 var options = {
     headers: {
-        'X-ChatWorkToken': '{chatwork api token}'
+        'X-ChatWorkToken': 'edfa1fcab07c02a4cbe7889dbfd4867e'
     },
     from: [],
     json: true
 };
 var serial_server = {
-   url: 'http://localhost:{port-number}',
+   url: 'http://localhost:8785',
    from: [],
    json: true
 };

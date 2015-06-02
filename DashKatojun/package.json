@@ -1,0 +1,11 @@
+{
+  "name": "Dash Katojun",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "author": "Seiji Nishiguchi",
+  "license": "MIT",
+  "dependencies": {
+    "request": "~2.49.0"
+  }
+}
